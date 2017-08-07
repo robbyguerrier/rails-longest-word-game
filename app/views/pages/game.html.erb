@@ -1,0 +1,17 @@
+<h1>Grille</h1>
+<%= @start_time = Time.now.to_i %>
+<%= @grid %>
+
+
+<form action="/score">
+  <label for="attempt">Game</label>
+  <input type="text" id="attempt" name="attempt" placeholder="Guess the word?">
+  <input type="submit" value="Go on!">
+  <input type="hidden" name="grid" value="<%= @grid%>">
+  <input type="hidden" name="start_time" value="<%= @start_time%>">
+
+
+</form>
+
+<!-- ==> a l'action score ==> fais passer la tentative et le start time
+ -->
